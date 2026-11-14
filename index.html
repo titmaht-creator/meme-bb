@@ -2,46 +2,41 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MEME BB | TON Token</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b12">
+<meta name="description" content="MEME BB — a community-driven meme token on TON. Explore the token and get it on DeDust.">
+<title>MEME BB — The Fox of TON</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#080d18;color:#eef4ff;font-family:Arial,sans-serif;text-align:center}
-main{max-width:760px;margin:45px auto;padding:25px}
-.logo{font-size:64px;font-weight:900;color:#8fcaff;text-shadow:0 0 25px #287acb}
-h1{font-size:38px;margin:10px}
-p{color:#b9c8dc;line-height:1.8}
-.card{background:#111d30;border:1px solid #29415f;border-radius:16px;padding:22px;margin:20px 0;overflow-wrap:anywhere}
-a{color:#8fcaff}
-.button{display:inline-block;background:#1684dc;color:white;padding:14px 25px;border-radius:10px;text-decoration:none;font-weight:bold;margin:8px}
-.small{font-size:13px;color:#8798ae}
+:root{--bg:#080b12;--panel:#101722;--line:#273445;--blue:#79c8ff;--silver:#e8f0f8;--muted:#9aaabd;--gold:#d6a85f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--silver);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.12em}.brand-mark{width:38px;height:38px}.nav{display:flex;align-items:center;gap:28px;color:#b8c5d5;font-size:14px}.nav a:hover{color:var(--blue)}.nav .buy{padding:10px 17px;border:1px solid #79c8ff80;border-radius:8px;color:var(--blue)}
+.hero{min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px;padding:70px 0 85px;position:relative}.eyebrow{color:var(--blue);font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:800}.hero h1{font-size:clamp(48px,7vw,82px);line-height:.98;letter-spacing:-.055em;margin:18px 0}.hero h1 span{color:var(--blue)}.lead{max-width:520px;color:var(--muted);font-size:18px}.actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 22px;border-radius:8px;font-weight:800;font-size:14px;transition:.2s}.primary{background:linear-gradient(110deg,#7bcaff,#b9e5ff);color:#07111c;box-shadow:0 8px 30px #58baff25}.primary:hover{transform:translateY(-2px);box-shadow:0 12px 35px #58baff40}.secondary{border:1px solid #ffffff30;color:#e4edf7}.hero-art{min-height:420px;display:grid;place-items:center;position:relative}.orb{position:absolute;width:min(390px,85vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#18344a 0,#102033 42%,#0b111b 70%);border:1px solid #8acfff25;box-shadow:0 0 100px #3d9ed51a,inset 0 0 60px #5bbdff12}.fox{width:min(360px,85%);position:relative;filter:drop-shadow(0 22px 35px #0009)}.hero-art:after{content:"MEME BB";position:absolute;bottom:10px;color:#ffffff18;font-weight:900;letter-spacing:.35em;font-size:14px}
+.ticker{border-block:1px solid var(--line);background:#0d131d}.ticker .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:18px 0;color:#a9b8c9;font-size:12px;letter-spacing:.12em;text-transform:uppercase}.ticker b{color:var(--silver);letter-spacing:.04em}
+section{padding:90px 0}.section-head{max-width:650px;margin-bottom:35px}.section-head h2{font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-.04em;margin:10px 0}.section-head p{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tile,.tokenbox{background:linear-gradient(145deg,#121c29,#0d131d);border:1px solid var(--line);border-radius:14px;padding:25px}.tile .num{font-size:12px;color:var(--blue);letter-spacing:.15em}.tile h3{margin:12px 0 6px}.tile p{margin:0;color:var(--muted);font-size:14px}
+.token-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.supply{display:flex;flex-direction:column;justify-content:center;min-height:250px}.supply strong{font-size:clamp(30px,4vw,48px);letter-spacing:-.04em}.supply span{color:var(--muted);font-size:13px}.details{display:grid;grid-template-columns:1fr 1fr;gap:12px}.detail{padding:17px;background:#0b111a;border:1px solid #253448;border-radius:10px}.detail small{display:block;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em}.detail b{display:block;margin-top:5px;font-size:15px;overflow-wrap:anywhere}
+.contract{margin-top:18px;display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.address{font-size:13px;color:#b6c8da;overflow-wrap:anywhere}.copy{border:1px solid #79c8ff65;background:#132335;color:var(--blue);padding:9px 13px;border-radius:7px;cursor:pointer}
+.buy-panel{background:radial-gradient(ellipse at 85% 15%,#17354c 0,transparent 45%),linear-gradient(120deg,#121d2b,#0c121b);border:1px solid #31506b;border-radius:18px;padding:clamp(25px,5vw,55px);display:flex;align-items:center;justify-content:space-between;gap:25px}.buy-panel h2{font-size:clamp(30px,4vw,46px);line-height:1.1;margin:10px 0}.buy-panel p{color:var(--muted);max-width:500px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:#8494a8;font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:760px){.nav{gap:13px}.nav a:not(.buy){display:none}.hero{grid-template-columns:1fr;padding:65px 0 55px;text-align:center}.hero-copy{display:flex;flex-direction:column;align-items:center}.hero-art{min-height:320px}.grid{grid-template-columns:1fr}.token-layout{grid-template-columns:1fr}.buy-panel{align-items:flex-start;flex-direction:column}.ticker .wrap{justify-content:center}.details{grid-template-columns:1fr 1fr}}
+@media(max-width:420px){.wrap{width:min(100% - 28px,1120px)}.details{grid-template-columns:1fr}.hero h1{font-size:48px}}
 </style>
 </head>
 <body>
+<header class="wrap">
+<a class="brand" href="#"><svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M12 15 39 30 50 19 61 30 88 15 82 62 50 88 18 62Z" fill="#79c8ff"/><path d="m25 28 18 13-5 25-18-10Zm50 0L57 41l5 25 18-10Z" fill="#0b1420"/><path d="m39 67 11 9 11-9-11-4Z" fill="#d6a85f"/></svg>MEME BB</a>
+<nav class="nav"><a href="#about">About</a><a href="#token">Token</a><a href="#community">Community</a><a class="buy" href="https://dedust.io/coins/EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ">Buy on DeDust ↗</a></nav>
+</header>
 <main>
-<div class="logo">MEME BB</div>
-<h1>The Future of Memes on TON</h1>
-<p>A community-driven meme token built on the TON blockchain.</p>
-
-<div class="card">
-<h2>Token Information</h2>
-<p><b>Name:</b> MEME BB</p>
-<p><b>Symbol:</b> MEMEBB</p>
-<p><b>Network:</b> TON</p>
-<p><b>Total Supply:</b> 10,000,000,000 MEMEBB</p>
-<p><b>Decimals:</b> 9</p>
+<div class="wrap hero">
+<div class="hero-copy"><div class="eyebrow">A new face on the TON blockchain</div><h1>THE FOX<br>OF <span>TON.</span></h1><p class="lead">Meet MEME BB — a community-driven meme token with a bold identity and a place in the ever-evolving TON ecosystem.</p><div class="actions"><a class="btn primary" href="https://dedust.io/coins/EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ">BUY MEME BB ↗</a><a class="btn secondary" href="#token">Explore the token</a></div></div>
+<div class="hero-art"><div class="orb"></div><svg class="fox" viewBox="0 0 400 390" role="img" aria-label="Stylized silver and blue fox emblem"><defs><linearGradient id="fur" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf5ff"/><stop offset=".48" stop-color="#8db9d7"/><stop offset="1" stop-color="#426b8c"/></linearGradient><linearGradient id="shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#263f56"/><stop offset="1" stop-color="#0b1420"/></linearGradient></defs><path d="M49 56 155 111 200 75 245 111 351 56 329 228 200 344 71 228Z" fill="url(#fur)" stroke="#d8edff" stroke-width="3"/><path d="m70 91 86 43-22 119-69-53Zm260 0-86 43 22 119 69-53Z" fill="url(#shade)"/><path d="m156 112 44-37 44 37-13 128-31 62-31-62Z" fill="#c8e1f3"/><path d="m157 151 36 20-7 19-35-13Zm86 0-36 20 7 19 35-13Z" fill="#102236"/><path d="m180 230 20 13 20-13-20-8Z" fill="#d6a85f"/><path d="m112 245 88 99 88-99-88 56Z" fill="#6e9cbb" opacity=".7"/><path d="m71 228 129 116 129-116-42 94-87 47-87-47Z" fill="#172b3e" stroke="#79c8ff" stroke-width="2"/></svg></div>
 </div>
-
-<div class="card">
-<h2>Smart Contract</h2>
-<p>EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ</p>
-<a href="https://tonviewer.com/EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ">View on Tonviewer</a>
-</div>
-
-<a class="button" href="https://dedust.io/coins/EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ">BUY ON DEDUST</a>
-<a class="button" href="https://t.me/+bWfKjVJId_85OWQ0">Telegram Community</a>
-
-<p class="small">MEME BB is a meme token. Cryptocurrency markets involve risk. This website does not promise profits or investment returns.</p>
+<div class="ticker"><div class="wrap"><span>Built on <b>TON</b></span><span>Symbol <b>MEMEBB</b></span><span>Community <b>Driven</b></span><span>Trade on <b>DeDust</b></span></div></div>
+<section id="about" class="wrap"><div class="section-head"><div class="eyebrow">Meet the project</div><h2>Sharp identity.<br>Community spirit.</h2><p>MEME BB brings a distinctive fox identity to the TON meme-token space. Explore the project, check the on-chain details, and join the community.</p></div><div class="grid"><article class="tile"><div class="num">01 / IDENTITY</div><h3>The Fox</h3><p>A recognizable project symbol built around confidence, agility and character.</p></article><article class="tile"><div class="num">02 / NETWORK</div><h3>On TON</h3><p>MEME BB is a token on The Open Network. Verify contract details before trading.</p></article><article class="tile"><div class="num">03 / COMMUNITY</div><h3>Built together</h3><p>Follow official community channels for project updates and announcements.</p></article></div></section>
+<section id="token" class="wrap"><div class="section-head"><div class="eyebrow">Token details</div><h2>Know your token.</h2><p>Key MEME BB information and the official contract address.</p></div><div class="token-layout"><div class="tokenbox supply"><span>Total supply</span><strong>10,000,000,000</strong><span>MEMEBB</span></div><div class="tokenbox"><div class="details"><div class="detail"><small>Token name</small><b>MEME BB</b></div><div class="detail"><small>Symbol</small><b>MEMEBB</b></div><div class="detail"><small>Blockchain</small><b>The Open Network (TON)</b></div><div class="detail"><small>Decimals</small><b>9</b></div></div><div class="contract"><div><small style="color:#9aaabd">OFFICIAL CONTRACT</small><div class="address" id="contract">EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ</div></div><button class="copy" onclick="copyContract()">Copy address</button></div><p style="margin:15px 0 0;font-size:13px"><a style="color:var(--blue)" href="https://tonviewer.com/EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ" target="_blank" rel="noopener">View contract on Tonviewer ↗</a></p></div></div></section>
+<section id="community" class="wrap"><div class="buy-panel"><div><div class="eyebrow">Join the movement</div><h2>Ready to meet<br>MEME BB?</h2><p>Trade through DeDust and follow the official Telegram community. Always verify the token contract before making a transaction.</p><div class="actions"><a class="btn primary" href="https://dedust.io/coins/EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ">BUY ON DEDUST ↗</a><a class="btn secondary" href="https://t.me/+bWfKjVJId_85OWQ0" target="_blank" rel="noopener">JOIN TELEGRAM ↗</a></div></div></div></section>
 </main>
-</body>
-</html>
+<footer><div class="wrap foot"><span>© 2026 MEME BB. All rights reserved.</span><span>MEME BB is a meme token. Crypto assets involve risk; no profits or returns are promised.</span></div></footer>
+<script>function copyContract(){const value=document.getElementById('contract').textContent;navigator.clipboard.writeText(value).then(()=>{const b=document.querySelector('.copy');b.textContent='Copied!';setTimeout(()=>b.textContent='Copy address',1600)}).catch(()=>{const r=document.createRange();r.selectNodeContents(document.getElementById('contract'));const s=window.getSelection();s.removeAllRanges();s.addRange(r)})}</script>
+</body></html>
