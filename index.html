@@ -34,6 +34,78 @@ body:after{opacity:.8;mix-blend-mode:screen;filter:blur(2px)}
 @keyframes gridDrift{to{background-position:64px 64px,64px 64px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
+
+/* RESPONSIVE LAYOUT CORRECTION */
+html{scroll-padding-top:18px}
+[id]{scroll-margin-top:18px}
+img{max-width:100%}
+.hero{min-height:clamp(560px,76vh,690px);grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.hero>.copy,.hero>.art{min-width:0}
+.art{width:100%;min-width:0}
+.logo-frame{width:min(100%,480px);max-width:100%}
+.orbit{width:min(100%,510px);max-width:100%}
+@media(max-width:1024px){
+ .wrap{width:min(100% - 40px,900px)}
+ .hero{gap:16px;min-height:600px;padding:42px 0 52px}
+ h1{font-size:clamp(44px,6.5vw,72px)}
+ .logo-frame{width:min(100%,420px)}
+ .roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:780px){
+ .wrap{width:calc(100% - 32px)}
+ .topbar{height:62px}
+ .hero{display:flex;flex-direction:column;gap:18px;min-height:0;padding:22px 0 34px}
+ .hero>.art{order:-1;width:min(100%,430px);padding:8px;margin:0 auto 4px;aspect-ratio:1/1}
+ .hero>.copy{order:1;width:100%}
+ .logo-frame{width:min(78vw,350px);padding:9px}
+ .orbit{width:min(88vw,390px)}
+ .art-label{bottom:-5px;font-size:8px}
+ h1{font-size:clamp(42px,11vw,64px);margin:13px 0 10px}
+ .eyebrow{letter-spacing:.18em}
+ .copy p{max-width:560px;margin:8px auto 0}
+ .buy-panel{margin-top:18px}
+ .secondary{justify-content:center;margin-top:12px}
+ .ticker{padding:14px 0}
+ .ticker .wrap{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ .stat{border:0}
+ .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .roadmap{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .section{padding:48px 0}
+ .lower-coin{padding:48px 0 72px}
+}
+@media(max-width:520px){
+ .wrap{width:calc(100% - 28px)}
+ .hero{padding-top:14px;gap:14px}
+ .hero>.art{width:100%;max-width:360px}
+ .logo-frame{width:min(74vw,300px);padding:8px}
+ .orbit{width:min(84vw,330px)}
+ .art-label{font-size:7px;letter-spacing:.2em}
+ .copy p{font-size:13px;line-height:1.7}
+ .buy-panel{width:min(100%,360px)}
+ .buy-big{width:100%;padding:15px 12px;font-size:11px;letter-spacing:.07em}
+ .secondary{gap:8px}
+ .ghost{padding:11px 12px;font-size:9px}
+ .ticker .wrap{gap:10px}
+ .stat b{font-size:13px}
+ .grid{grid-template-columns:1fr;gap:10px}
+ .item.supply,.item.contract{grid-column:auto}
+ .item{min-height:0;padding:16px}
+ .item.contract b{font-size:11px;overflow-wrap:anywhere}
+ .roadmap,.guide-grid{grid-template-columns:1fr}
+ .roadmap-card{min-height:0}
+ .section{padding:42px 0}
+ .section-head h2{font-size:clamp(27px,8vw,36px)}
+ .community{padding:28px 16px}
+ .lower-coin .coin-stage{width:min(76vw,290px)}
+}
+@media(max-height:700px) and (min-width:781px){
+ .hero{min-height:540px;padding-top:30px;padding-bottom:35px}
+ .logo-frame{width:min(100%,410px)}
+}
+@media(prefers-reduced-motion:reduce){
+ body:after,body:before,.hero:before,.orbit,.orbit:after,.logo-frame,.logo-frame img,.logo-frame:after,.lower-coin .coin-stage,.lower-coin img{animation:none!important}
+}
+
 </style></head><body>
 <header class="topbar wrap"><a class="brand" href="#">BEHNIYA COIN <span>· MEME BB</span></a><nav><a href="#tokenomics">TOKENOMICS</a><a href="#roadmap">ROADMAP</a><a href="#buy-guide">HOW TO BUY</a><a href="#community">COMMUNITY</a><a class="nav-buy" href="https://dedust.io/coins/EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ">BUY MEME BB ↗</a></nav></header>
 <main><section class="hero wrap"><div class="copy"><div class="eyebrow">THE OFFICIAL BEHNIYA COIN ON TON</div><h1>BEHNIYA <span>COIN.</span></h1><p>Meet Behniya Coin — ticker MEME BB. A bold identity and a community-powered token in the TON ecosystem. Explore the official token details and trading link.</p><div class="buy-panel"><a class="buy-big" href="https://dedust.io/coins/EQAm9sTvu1cbITCcDwJ7E_S6c4qBTCf44cc7F__vzcdaqJcZ">⚡ BUY MEME BB ON DEDUST <span>↗</span></a><div class="buy-note">OFFICIAL TOKEN MARKET LINK</div></div><div class="secondary"><a class="ghost" href="https://t.me/+bWfKjVJId_85OWQ0" target="_blank" rel="noopener">JOIN TELEGRAM ↗</a><a class="ghost" href="#tokenomics">TOKEN DETAILS ↓</a></div></div>
