@@ -1,0 +1,7 @@
+name = "bb-miner-bot"
+main = "worker.js"
+compatibility_date = "2026-11-25"
+
+[[kv_namespaces]]
+binding = "USERS"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
